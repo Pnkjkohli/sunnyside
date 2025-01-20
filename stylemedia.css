@@ -1,0 +1,23 @@
+@media (min-width: 320px) and (max-width: 575.98px) {
+  body .header {
+    background-image: url(images/mobile/image-header.jpg);
+    padding: 30px;
+    background-size: cover;
+  }
+  body .header .header_menu .onlymobile {
+    display: block;
+  }
+  body .header .header_menu .nav_bar {
+    display: none;
+  }
+  body .header .header_title h1 {
+    letter-spacing: 8px;
+    font-size: 32px;
+    color: #ffffff;
+    padding: 22%;
+    text-align: center;
+  }
+  body .desktop {
+    display: none;
+  }
+}/*# sourceMappingURL=stylemedia.css.map */
