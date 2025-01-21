@@ -58,6 +58,7 @@
 
 .header{
     background-image: url(images/desktop/image-header.jpg);
+    background-position-x: center;
     padding: 30px;
     background-size: cover;
     height: 700px; 
@@ -66,6 +67,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    .onlymobile{
+        display: none;
+    }
     .nav_bar{
     ul{
         display: flex ;
@@ -177,24 +181,36 @@ img{
 .design_section{
     @extend .grid_section;  
     .design_image{
+        position: relative;
         img{
             width: 100%;
             height: auto;
             }
-    }
-}
-   
-
-    .design_contents{
-        @extend .grid_section; 
-        position: relative;
-        .design_title{
+          .design_title{
             @extend .grid_title;
             position: absolute;
             bottom: 30px;
-            right: 50%;
+         
             h1{
                 text-align: center;
+                font-family: "Fraunces", serif;
+            }
+            p{
+                text-align: center;
+               
+                padding: 15px;
+                color: #5a636c;
+                width: 100%;
+            }
+          } 
+          .Photography_title{
+            @extend .grid_title;
+            position: absolute;
+            bottom: 30px;
+          
+            h1{
+                text-align: center;
+                font-family: "Fraunces", serif;
             }
             p{
                 text-align: center;
@@ -202,7 +218,15 @@ img{
                 color: $very_dark_grayish_blue;
                 width: 83%;
             }
-        }
+          }
+    }
+}
+   
+
+    .design_contents{
+        @extend .grid_section; 
+        position: relative;
+      
         .Photography_title{
             @extend .grid_title;
             position: absolute;
@@ -261,7 +285,7 @@ img{
         }
     }
     .gallary_section{
-        .gallary{
+        .gallary_desktop{
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
             .gallary_img{
@@ -269,10 +293,13 @@ img{
                 height: auto;
             }
         }
+        .gallary_mobile{
+            display: none;
+        }
     }
     .footer{
         background-color:#7bbca2;
-        padding: 5%;
+        padding: 5rem;
         .footer_logo{
             text-align: center;
             color: $graphic;
@@ -296,6 +323,11 @@ img{
           a{
             text-decoration: none;
             color: $graphic;
+            cursor: pointer;
+
+          }
+          a:hover{
+            color: $white;
           }
         }
         .footer_socialmedia_link{
@@ -306,5 +338,13 @@ img{
                 gap: 26px;
                 color: $graphic;
                 margin-top: 3%;
+                cursor: pointer;
+
+                .fa-brands:hover{
+                    color: $white;
+               
+            }
         }
+        
+      
     }

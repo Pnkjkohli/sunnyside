@@ -1,11 +1,15 @@
 @media (min-width: 320px) and (max-width: 575.98px) {
   body .header {
     background-image: url(images/mobile/image-header.jpg);
-    padding: 30px;
+    background-position-x: center;
     background-size: cover;
+    width: auto;
   }
   body .header .header_menu .onlymobile {
     display: block;
+  }
+  body .header .header_menu .onlymobile .fa-bars {
+    color: #ffffff;
   }
   body .header .header_menu .nav_bar {
     display: none;
@@ -14,10 +18,353 @@
     letter-spacing: 8px;
     font-size: 32px;
     color: #ffffff;
-    padding: 22%;
+    padding: 22% 0%;
     text-align: center;
   }
-  body .desktop {
+  body .transform_section {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+  }
+  body .transform_section .transform_title {
+    position: relative;
+    padding: 40px 5px;
+    align-items: center;
+  }
+  body .transform_section .transform_title h1 {
+    text-align: center;
+  }
+  body .transform_section .transform_title p {
+    text-align: center;
+    margin: 15px 28px;
+  }
+  body .transform_section .transform_title a {
+    font-weight: bold;
+  }
+  body .transform_section .transform_title .highlight_Transform {
+    left: 36%;
+    bottom: 11%;
+    width: 29%;
+  }
+  body .standout_section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  body .standout_section .standout_title {
+    position: relative;
+    padding: 40px 15px;
+    align-items: center;
+  }
+  body .standout_section .standout_title h1 {
+    text-align: center;
+  }
+  body .standout_section .standout_title p {
+    text-align: center;
+    margin: 15px 27px;
+  }
+  body .standout_section .standout_title a {
+    font-weight: bold;
+  }
+  body .standout_section .standout_title .highlight_Stand {
+    left: 36%;
+    bottom: 11%;
+    width: 29%;
+  }
+  body .design_section {
+    display: flex;
+    flex-direction: column;
+  }
+  body .design_section .design_image {
+    display: flex;
+    flex-direction: column;
+  }
+  body .design_section .design_image .design_title {
+    padding: 0%;
+  }
+  body .design_section .design_image .Photography_title {
+    padding: 0%;
+  }
+  body .design_section .design_image .desktop_graphic {
     display: none;
+  }
+  .testimonial_section {
+    margin: 0px;
+  }
+  .testimonial_section h1 {
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 16px;
+    font-family: "Fraunces";
+  }
+  .testimonial_section .testimonial_clients {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial_section .testimonial_clients .clients_detail {
+    margin: 30px 0px;
+  }
+  .testimonial_section .testimonial_clients .clients_detail .name {
+    padding: 5%;
+    font-family: "Fraunces";
+    font-weight: bold;
+  }
+  .testimonial_section .testimonial_clients .clients_detail .designation {
+    color: #a7abae;
+    font-family: "Fraunces";
+  }
+  .testimonial_section .testimonial_clients .clients_detail .clients_description {
+    padding: 20px 24px;
+  }
+  .testimonial_section .testimonial_clients .clients_detail .clients_description p {
+    line-height: 1.8;
+    font-size: 18px;
+  }
+  .gallary_section .gallary_desktop {
+    display: none;
+  }
+  .gallary_section .gallary_mobile {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .gallary_section .gallary_mobile .gallary_img_mobile {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .header {
+    background-image: url(images/mobile/image-header.jpg);
+    background-position-x: center;
+    background-size: cover;
+    width: auto;
+  }
+  .header .header_menu .onlymobile {
+    display: block;
+  }
+  .header .header_menu .onlymobile .fa-bars {
+    color: #ffffff;
+  }
+  .header .header_menu .nav_bar {
+    display: none;
+  }
+  .header .header_title h1 {
+    letter-spacing: 8px;
+    font-size: 32px;
+    color: #ffffff;
+    padding: 22% 0%;
+    text-align: center;
+  }
+  .transform_section {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    height: auto;
+  }
+  .transform_section .transform_title {
+    position: relative;
+    padding: 40px 5px;
+    align-items: center;
+  }
+  .transform_section .transform_title h1 {
+    text-align: center;
+  }
+  .transform_section .transform_title p {
+    text-align: center;
+    margin: 15px 28px;
+  }
+  .transform_section .transform_title a {
+    font-weight: bold;
+  }
+  .transform_section .transform_title .highlight_Transform {
+    left: 32%;
+    bottom: 11%;
+    width: 36%;
+  }
+  .standout_section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .standout_section .standout_title {
+    position: relative;
+    padding: 40px 15px;
+    align-items: center;
+  }
+  .standout_section .standout_title h1 {
+    text-align: center;
+  }
+  .standout_section .standout_title p {
+    text-align: center;
+    margin: 15px 27px;
+  }
+  .standout_section .standout_title a {
+    font-weight: bold;
+  }
+  .standout_section .standout_title .highlight_Stand {
+    left: 32%;
+    bottom: 11%;
+    width: 36%;
+  }
+  .design_section {
+    display: flex;
+    flex-direction: column;
+  }
+  .design_section .design_image {
+    display: flex;
+    flex-direction: column;
+  }
+  .design_section .design_image .design_title {
+    padding: 0%;
+  }
+  .design_section .design_image .Photography_title {
+    padding: 0%;
+  }
+  .design_section .design_image .desktop_graphic {
+    width: 100%;
+    height: auto;
+  }
+  .testimonial_section {
+    margin: 0px;
+  }
+  .testimonial_section h1 {
+    text-align: center;
+    margin: 50px 0px;
+    font-size: 16px;
+    font-family: "Fraunces";
+  }
+  .testimonial_section .testimonial_clients {
+    display: flex;
+    flex-direction: column;
+  }
+  .testimonial_section .testimonial_clients .clients_detail {
+    margin: 30px 0px;
+  }
+  .testimonial_section .testimonial_clients .clients_detail .name {
+    padding: 5%;
+    font-family: "Fraunces";
+    font-weight: bold;
+  }
+  .testimonial_section .testimonial_clients .clients_detail .designation {
+    color: #a7abae;
+    font-family: "Fraunces";
+  }
+  .testimonial_section .testimonial_clients .clients_detail .clients_description {
+    padding: 20px 24px;
+  }
+  .testimonial_section .testimonial_clients .clients_detail .clients_description p {
+    line-height: 1.8;
+    font-size: 18px;
+  }
+  .gallary_section .gallary_desktop {
+    display: none;
+  }
+  .gallary_section .gallary_mobile {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .gallary_section .gallary_mobile .gallary_img_mobile {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .header .header_title h1 {
+    padding: 10% 0%;
+  }
+  .design_section .design_image .formobile_graphic {
+    display: none;
+  }
+  .design_section .design_image .design_title {
+    bottom: 10px;
+    padding: 0px 0px;
+  }
+  .design_section .design_image .design_title p {
+    width: 100%;
+    margin: 0px 0px;
+  }
+  .design_section .design_image .Photography_title {
+    bottom: 10px;
+    padding: 0px 0px;
+  }
+  .transform_section {
+    height: 100%;
+  }
+  .transform_section .transform_title {
+    padding: 0px 36px;
+  }
+  .transform_section .transform_title .highlight_Transform {
+    left: 8%;
+    width: 25%;
+  }
+  .standout_section {
+    height: 315px;
+  }
+  .standout_section .standout_title {
+    padding: 0px 36px;
+  }
+  .standout_section .standout_title .highlight_Stand {
+    left: 8%;
+    width: 25%;
+  }
+  .gallary_section .gallary_desktop .gallary_img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .transform_section {
+    height: 420px;
+  }
+  .transform_section .transform_title .highlight_Transform {
+    left: 25%;
+  }
+  .standout_section {
+    height: 420px;
+  }
+  .standout_section .standout_title .highlight_Stand {
+    left: 25%;
+  }
+  .design_section .design_image .formobile_graphic {
+    display: none;
+  }
+  .design_section .design_image .formobile_graphic .design_title {
+    bottom: 10px;
+    padding: 0px 20px;
+  }
+  .design_section .design_image .formobile_graphic .design_title p {
+    width: 100%;
+    margin: 15px 0px;
+  }
+  .design_section .design_image .formobile_graphic .Photography_title {
+    bottom: 10px;
+    padding: 0px 20px;
+  }
+  .testimonial_section .testimonial_clients .clients_detail .clients_description {
+    padding: 8%;
+  }
+  .gallary_section .gallary_desktop .gallary_img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .design_section .design_image .formobile_graphic {
+    display: none;
+  }
+  .transform_section .transform_title .highlight_Transform {
+    left: 20%;
+    width: 16%;
+  }
+  .standout_section .standout_title .highlight_Stand {
+    left: 20%;
+    width: 16%;
+  }
+  .gallary_section .gallary_desktop .gallary_img {
+    width: 100%;
+    height: auto;
   }
 }/*# sourceMappingURL=stylemedia.css.map */
