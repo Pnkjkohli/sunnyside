@@ -375,20 +375,24 @@
   font-family: "Barlow", serif;
 }
 
-.grid_section, .design_contents, .design_section, .standout_section, .transform_section {
+.testimonial_section .testimonial_clients .clients_detail .name, .testimonial_section .testimonial_clients .clients_detail .clients_description, .testimonial_section h1, .standout_section .standout_title a, .standout_section .standout_title h1, .transform_section .transform_title a, .transform_section .transform_title h1, .header .header_title h1, .button_border {
+  font-family: "Fraunces", serif;
+}
+
+.design_contents, .design_section, .standout_section, .transform_section {
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
 }
 
-.grid_title, .design_contents .Photography_title, .design_section .design_image .Photography_title, .design_section .design_image .design_title, .standout_section .standout_title, .transform_section .transform_title {
+.design_contents .Photography_title, .design_section .design_image .Photography_title, .design_section .design_image .design_title, .standout_section .standout_title, .transform_section .transform_title {
   padding: 0px 129px;
   line-height: 1.5;
   display: flex;
   flex-direction: column;
 }
 
-.highlight_properties, .standout_section .standout_title .highlight_Stand, .transform_section .transform_title .highlight_Transform {
+.standout_section .standout_title .highlight_Stand, .transform_section .transform_title .highlight_Transform {
   position: absolute;
   bottom: -1%;
   height: 10px;
@@ -404,8 +408,11 @@
   padding: 10px 18px;
   color: #19536b;
   text-transform: uppercase;
-  font-family: "Fraunces", serif;
   font-weight: 600;
+}
+.button_border:hover {
+  background-color: hsla(0, 0%, 100%, 0.5);
+  color: hsl(0, 0%, 100%);
 }
 
 .header {
@@ -443,8 +450,7 @@
   letter-spacing: 7px;
   font-size: 48px;
   color: #ffffff;
-  padding: 7%;
-  font-family: "Fraunces", serif;
+  padding: 4rem;
 }
 
 .transform_section {
@@ -458,7 +464,6 @@
   position: relative;
 }
 .transform_section .transform_title h1 {
-  font-family: "Fraunces", serif;
   width: 90%;
   color: #23303e;
 }
@@ -469,11 +474,13 @@
 .transform_section .transform_title a {
   text-decoration: none;
   color: #23303e;
-  font-family: "Fraunces", serif;
   font-size: 14px;
 }
 .transform_section .transform_title .highlight_Transform {
   background: #fad400;
+}
+.transform_section .transform_title .highlight_Transform:hover {
+  background-color: #ffa600;
 }
 
 .standout_section {
@@ -487,7 +494,6 @@
   position: relative;
 }
 .standout_section .standout_title h1 {
-  font-family: "Fraunces", serif;
   width: 90%;
   color: #23303e;
 }
@@ -498,11 +504,13 @@
 .standout_section .standout_title a {
   text-decoration: none;
   color: #23303e;
-  font-family: "Fraunces", serif;
   font-size: 14px;
 }
 .standout_section .standout_title .highlight_Stand {
   background: #fe7867;
+}
+.standout_section .standout_title .highlight_Stand:hover {
+  background-color: #f44b4b;
 }
 
 .design_section .design_image {
@@ -560,29 +568,31 @@
 }
 
 .testimonial_section {
-  margin: 10%;
+  padding: 2.2rem 1.11rem;
+  text-align: center;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
 }
 .testimonial_section h1 {
   text-align: center;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: #a7abae;
-  margin: 50px;
-  font-family: "Fraunces", serif;
 }
 .testimonial_section .testimonial_clients {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .testimonial_section .testimonial_clients .clients_detail .clients_description {
-  padding: 9%;
-  font-family: "Fraunces", serif;
+  padding: 2.2rem;
   color: #5a636c;
 }
 .testimonial_section .testimonial_clients .clients_detail .name {
-  padding: 5%;
+  padding: 1rem;
+  font-weight: bold;
 }
 .testimonial_section .testimonial_clients .clients_detail .designation {
   color: #5a636c;
@@ -595,7 +605,7 @@
 
 .gallary_section .gallary_desktop {
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-columns: repeat(4, 1fr);
 }
 .gallary_section .gallary_desktop .gallary_img {
   width: 320px;

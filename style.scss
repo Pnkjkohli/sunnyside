@@ -1,31 +1,31 @@
 @import "variable";
 @import "stylemedia";
-*{
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: "Barlow", serif;
 }
 
-@mixin text{
-    font-family: "Fraunces", serif;
-    font-size: 18px;
-}
-@mixin fontFamilyFraunces{
+
+%fontFamilyFraunces {
     font-family: "Fraunces", serif;
 }
-@mixin highlighted_background($color){
-    background:$color;
+
+@mixin highlighted_background($color) {
+    background: $color;
 }
 
 
-.grid_section{
+
+%grid_section {
     display: grid;
     grid-template-columns: 50% 50%;
     align-items: center;
 }
 
-.grid_title{
+%grid_title {
     padding: 0px 129px;
     line-height: 1.5;
     display: flex;
@@ -33,7 +33,7 @@
     // position: relative;
 }
 
-.highlight_properties {
+%highlight_properties {
     position: absolute;
     bottom: -1%;
     height: 10px;
@@ -45,93 +45,116 @@
 
 
 // header section
-.button_border{
-    border-radius:20px;
+.button_border {
+    border-radius: 20px;
     background: $white;
     padding: 10px 18px;
-    color:$dark_blue;
+    color: $dark_blue;
     text-transform: uppercase;
-    @include fontFamilyFraunces;
+    @extend %fontFamilyFraunces;
     font-weight: 600;
 
+    &:hover {
+        background-color: hsla(0, 0%, 100%, 0.5);
+        color: hsl(0, 0%, 100%);
+    }
 }
 
-.header{
+.header {
     background-image: url(images/desktop/image-header.jpg);
     background-position-x: center;
     padding: 30px;
     background-size: cover;
-    height: 700px; 
+    height: 700px;
     width: 100%;
-    .header_menu{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .onlymobile{
-        display: none;
+
+    .header_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .onlymobile {
+            display: none;
+        }
+
+        .nav_bar {
+            ul {
+                display: flex;
+                flex-direction: row;
+                gap: 49px;
+                list-style: none;
+                color: $white;
+                align-items: center;
+                font-family: 'Barlow';
+               
+            }
+        }
     }
-    .nav_bar{
-    ul{
-        display: flex ;
-            flex-direction: row;
-            gap: 49px;
-            list-style: none;
-            color: $white;
-            align-items: center;
-            font-family: 'Barlow';
-    }
-    }
-    }
-    .header_title{
+
+    .header_title {
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 25px;
         // @include text;
 
-        h1{
+        h1 {
             letter-spacing: 7px;
             font-size: 48px;
             color: $white;
-            padding: 7%;
+            padding: 4rem;
             //font-family: "Fraunces", serif;
-            @include fontFamilyFraunces;
+            @extend %fontFamilyFraunces;
         }
     }
 }
 
 // transform_section
-.transform_section{
- @extend .grid_section;
-  height: 533px;
-    .transform_image{
-img{
-    width: 100%;
-    height: auto;
+.transform_section {
+    @extend %grid_section;
+    height: 533px;
+
+    .transform_image {
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
-    }
-    .transform_title{
-       @extend .grid_title;
-       position: relative;
-        h1{
-            @include fontFamilyFraunces;
+
+    .transform_title {
+        @extend %grid_title;
+        position: relative;
+
+        h1 {
+            @extend %fontFamilyFraunces;
             width: 90%;
             color: $very_dark_desaturated_blue;
         }
-        p{
+
+        p {
             margin: 15px 0px;
             color: $very_dark_grayish_blue;
         }
-       a{
-        text-decoration: none;
-        color: $very_dark_desaturated_blue;
-        @include fontFamilyFraunces;
-        font-size: 14px;
-       }
-       .highlight_Transform{
-        @extend .highlight_properties;
-        @include highlighted_background($yellow);
-    }
+
+        a {
+            text-decoration: none;
+            color: $very_dark_desaturated_blue;
+            @extend %fontFamilyFraunces;
+            font-size: 14px;
+        }
+
+        .highlight_Transform {
+            @extend %highlight_properties;
+            @include highlighted_background($yellow);
+
+            &:hover{
+                // @extend %highlight_properties;
+                background-color: #ffa600;
+            }
+        }
+
+
+
     }
 }
 
@@ -142,209 +165,252 @@ img{
 // standout section
 
 
-.standout_section{
+.standout_section {
     // object-fit: cover;
-    @extend .grid_section; 
+    @extend %grid_section;
     height: 533px;
-    .standout_image{
+
+    .standout_image {
+
         // object-fit: cover;
-        img{
+        img {
             width: 100%;
             height: auto;
+        }
+    }
+
+    .standout_title {
+        @extend %grid_title;
+        position: relative;
+
+        h1 {
+            @extend %fontFamilyFraunces;
+            width: 90%;
+            color: $very_dark_desaturated_blue;
+        }
+
+        p {
+            margin: 15px 0px;
+            color: $very_dark_grayish_blue;
+        }
+
+        a {
+            text-decoration: none;
+            color: $very_dark_desaturated_blue;
+            @extend %fontFamilyFraunces;
+            font-size: 14px;
+        }
+
+        .highlight_Stand {
+            @extend %highlight_properties;
+            @include highlighted_background($soft_red);
+            &:hover{
+                // @extend %highlight_properties;
+                background-color: #f44b4b;
             }
         }
-        .standout_title{
-            @extend .grid_title;
-            position: relative;
-             h1{
-                 @include fontFamilyFraunces;
-                 width: 90%;
-                 color: $very_dark_desaturated_blue;
-             }
-             p{
-                 margin: 15px 0px;
-                 color: $very_dark_grayish_blue;
-             }
-            a{
-             text-decoration: none;
-             color: $very_dark_desaturated_blue;
-             @include fontFamilyFraunces;
-             font-size: 14px;
-            }
-            .highlight_Stand{
-                @extend .highlight_properties;
-                @include highlighted_background($soft_red);
-            }
-         }
     }
-   
-.design_section{
-    @extend .grid_section;  
-    .design_image{
+}
+
+.design_section {
+    @extend %grid_section;
+
+    .design_image {
         position: relative;
-        img{
+
+        img {
             width: 100%;
             height: auto;
-            }
-          .design_title{
-            @extend .grid_title;
+        }
+
+        .design_title {
+            @extend %grid_title;
             position: absolute;
             bottom: 30px;
-         
-            h1{
+
+            h1 {
                 text-align: center;
                 font-family: "Fraunces", serif;
             }
-            p{
+
+            p {
                 text-align: center;
-               
+
                 padding: 15px;
                 color: #5a636c;
                 width: 100%;
             }
-          } 
-          .Photography_title{
-            @extend .grid_title;
+        }
+
+        .Photography_title {
+            @extend %grid_title;
             position: absolute;
             bottom: 30px;
-          
-            h1{
+
+            h1 {
                 text-align: center;
                 font-family: "Fraunces", serif;
             }
-            p{
+
+            p {
                 text-align: center;
                 margin: 15px 34px;
                 color: $very_dark_grayish_blue;
                 width: 83%;
             }
-          }
+        }
     }
 }
-   
-
-    .design_contents{
-        @extend .grid_section; 
-        position: relative;
-      
-        .Photography_title{
-            @extend .grid_title;
-            position: absolute;
-            bottom: 30px;
-            
-            left: 50%;
-            h1{
-                text-align: center;
-            }
-            p{
-                text-align: center;
-              
-                margin: 15px 34px;
-                color: $very_dark_grayish_blue;
-                width: 83%;
-
-            }
-        }
-    }
 
 
-    .testimonial_section{
-        margin: 10%;
-        h1{
+.design_contents {
+    @extend %grid_section;
+    position: relative;
+
+    .Photography_title {
+        @extend %grid_title;
+        position: absolute;
+        bottom: 30px;
+
+        left: 50%;
+
+        h1 {
             text-align: center;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: $grayish_blue;
-            margin: 50px;
-            @include fontFamilyFraunces;
         }
-            .testimonial_clients{
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                text-align: center;
-                
-                .clients_detail{
-                   .clients_description{
-                    padding: 9%;
-                    @include fontFamilyFraunces;
-                    color: $very_dark_grayish_blue;
-                   }
-                   .name{
-                    padding: 5%;
-                   }
-                   .designation{
-                    color:$very_dark_grayish_blue;
-                   }
-                img{
-                    height:50px;
-                    width:50px;
-                    border-radius: 50px;
-                }
-            }
+
+        p {
+            text-align: center;
+
+            margin: 15px 34px;
+            color: $very_dark_grayish_blue;
+            width: 83%;
+
         }
     }
-    .gallary_section{
-        .gallary_desktop{
+}
+
+
+.testimonial_section {
+    padding: 2.2rem 1.11rem;
+    text-align: center;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+    h1 {
+        text-align: center;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: $grayish_blue;
+        @extend %fontFamilyFraunces;
+    }
+
+    .testimonial_clients {
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-around;
+        // text-align: center;
             display: grid;
-            grid-template-columns: 25% 25% 25% 25%;
-            .gallary_img{
-                width: 320px;
-                height: auto;
+            grid-template-columns: repeat(3, 1fr);
+
+        .clients_detail {
+            .clients_description {
+                padding: 2.2rem;
+                @extend %fontFamilyFraunces;
+                color: $very_dark_grayish_blue;
             }
-        }
-        .gallary_mobile{
-            display: none;
+
+            .name {
+                padding: 1rem;
+                font-weight: bold;
+                @extend %fontFamilyFraunces;
+            }
+
+            .designation {
+                color: $very_dark_grayish_blue;
+            }
+
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50px;
+            }
         }
     }
-    .footer{
-        background-color:#7bbca2;
-        padding: 5rem;
-        .footer_logo{
-            text-align: center;
-            color: $graphic;
-            img{
-                width: 150px;
-                height: auto;
-                
-            }
-            
-            
-          
+}
+
+
+.gallary_section {
+    .gallary_desktop {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        .gallary_img {
+            width: 320px;
+            height: auto;
         }
-        .footer_menu{
-            display: flex;
-          flex-direction: row;
-          justify-content: center;
-          gap: 50px;
-          padding: 30px;
-          
-          
-          a{
+    }
+
+    .gallary_mobile {
+        display: none;
+    }
+}
+
+.footer {
+    background-color: #7bbca2;
+    padding: 5rem;
+
+    .footer_logo {
+        text-align: center;
+        color: $graphic;
+
+        img {
+            width: 150px;
+            height: auto;
+
+        }
+
+
+
+    }
+
+    .footer_menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 50px;
+        padding: 30px;
+
+
+        a {
             text-decoration: none;
             color: $graphic;
             cursor: pointer;
 
-          }
-          a:hover{
-            color: $white;
-          }
         }
-        .footer_socialmedia_link{
-            display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                gap: 26px;
-                color: $graphic;
-                margin-top: 3%;
-                cursor: pointer;
 
-                .fa-brands:hover{
-                    color: $white;
-               
-            }
+        a:hover {
+            color: $white;
         }
-        
-      
     }
+
+    .footer_socialmedia_link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 26px;
+        color: $graphic;
+        margin-top: 3%;
+        cursor: pointer;
+
+        .fa-brands:hover {
+            color: $white;
+
+        }
+    }
+
+
+}
