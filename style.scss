@@ -141,16 +141,21 @@
             color: $very_dark_desaturated_blue;
             @extend %fontFamilyFraunces;
             font-size: 14px;
+
+          &:hover + .highlight_Transform{
+            background-color: #ffa600;
+          }    
         }
 
+        
         .highlight_Transform {
             @extend %highlight_properties;
             @include highlighted_background($yellow);
 
-            &:hover{
-                // @extend %highlight_properties;
-                background-color: #ffa600;
-            }
+            // &:hover{
+            //     // @extend %highlight_properties;
+            //     background-color: #ffa600;
+            // }
         }
 
 
@@ -199,15 +204,15 @@
             color: $very_dark_desaturated_blue;
             @extend %fontFamilyFraunces;
             font-size: 14px;
+
+            &:hover + .highlight_Stand{
+                background-color: #f44b4b;
+              }
         }
 
         .highlight_Stand {
             @extend %highlight_properties;
             @include highlighted_background($soft_red);
-            &:hover{
-                // @extend %highlight_properties;
-                background-color: #f44b4b;
-            }
         }
     }
 }

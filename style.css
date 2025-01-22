@@ -476,11 +476,11 @@
   color: #23303e;
   font-size: 14px;
 }
+.transform_section .transform_title a:hover + .highlight_Transform {
+  background-color: #ffa600;
+}
 .transform_section .transform_title .highlight_Transform {
   background: #fad400;
-}
-.transform_section .transform_title .highlight_Transform:hover {
-  background-color: #ffa600;
 }
 
 .standout_section {
@@ -506,11 +506,11 @@
   color: #23303e;
   font-size: 14px;
 }
+.standout_section .standout_title a:hover + .highlight_Stand {
+  background-color: #f44b4b;
+}
 .standout_section .standout_title .highlight_Stand {
   background: #fe7867;
-}
-.standout_section .standout_title .highlight_Stand:hover {
-  background-color: #f44b4b;
 }
 
 .design_section .design_image {
